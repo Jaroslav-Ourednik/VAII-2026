@@ -1,0 +1,269 @@
+/*Back button----------------------------------------------------------*/
+.back-button {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-color-light);
+    padding: 5px 10px;
+    font-size: 25px;
+    border: 3px solid var(--dark-background);
+    background-color: var(--dark-background);
+    border-radius: 15px;
+    margin: 1rem;
+}
+.back-button:hover {
+    color: var(--light-purple);
+    border-color: var(--light-purple);
+}
+/*Back button----------------------------------------------------------*/
+
+
+/*Logo a Info----------------------------------------------------------*/
+.udalost-main-section {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    font-size: xx-large;
+    border: 3px solid var(--mid-background);
+    background-color: var(--mid-background);
+    color: var(--text-color-dark);
+    border-radius: 30px;
+    padding: 2rem;
+}
+.udalost-main-section img {
+    width: 40%;
+    height: auto;
+    border-radius: 30px;
+}
+.udalost-main-section div {
+    width: 40%;
+}
+.udalost-main-section h1 {
+    margin-top: 0;
+}
+.udalost-main-section dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.25rem 1rem;
+    margin: 0;
+}
+.udalost-main-section dd {
+    margin: 0;
+}
+
+/*Logo a Info----------------------------------------------------------*/
+
+
+
+/*Popis udalosti-------------------------------------------------------*/
+.udalost-popis-section p{
+    border: 3px solid var(--mid-background);
+    background-color: var(--mid-background);
+    color: var(--text-color-dark);
+    border-radius: 30px;
+    margin: 1rem;
+    padding: 5px 10px;
+    font-size: 25px;
+}
+.udalost-popis-section h2{
+    margin: 4rem auto 0 2rem
+}
+/*Popis udalosti-------------------------------------------------------*/
+
+
+/*Tlacidla (spolocny vzhlad)--------------------------------------------*/
+.udalost-prihlaseny-section button,
+.udalost-komentare-section button,
+.udalost-komentare-section input[type="submit"] {
+    display: inline-block;
+    color: var(--text-color-light);
+    padding: 10px;
+    font-size: 25px;
+    border: 3px solid var(--dark-background);
+    background-color: var(--dark-background);
+    border-radius: 15px;
+}
+.udalost-prihlaseny-section button:hover,
+.udalost-komentare-section button:hover,
+.udalost-komentare-section input[type="submit"]:hover {
+    color: var(--light-purple);
+    border-color: var(--light-purple);
+    cursor: pointer;
+}
+/*Tlacidla (spolocny vzhlad)--------------------------------------------*/
+
+
+/*Zoznamy a avatary (spolocne)-------------------------------------------*/
+.udalost-prihlaseny-section ul,
+.udalost-komentare-section ul {
+    font-size: xx-large;
+    border: 3px solid var(--mid-background);
+    background-color: var(--mid-background);
+    color: var(--text-color-dark);
+    border-radius: 15px;
+    padding: 0.5rem;
+    margin-top: 0;
+    list-style: none;
+}
+
+.udalost-prihlaseny-section li,
+.udalost-komentare-section li {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+    gap: 1rem;
+    background-color: var(--accent-background);
+    border-radius: 15px;
+}
+
+.udalost-prihlaseny-section li img,
+.udalost-komentare-section li img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/*Zoznamy a avatary (spolocne)-------------------------------------------*/
+
+
+/*Sekcia prihlaseny----------------------------------------------------*/
+.udalost-prihlaseny-section div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.udalost-prihlaseny-section h2 {
+    margin: 0 0 0 2rem;
+}
+
+.udalost-prihlaseny-section button {
+    margin: 1rem;
+    margin-left: auto;
+}
+
+.role {
+    margin-left: auto;
+}
+/*Sekcia prihlaseny----------------------------------------------------*/
+
+
+/*Sekcia komentare-----------------------------------------------------*/
+.udalost-komentare-section h2 {
+    margin: 4rem 0 1rem 2rem;
+}
+
+.udalost-komentare-section form {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.udalost-komentare-section input[type="text"] {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+    font-size: 25px;
+    border: 3px solid var(--mid-background);
+    background-color: var(--mid-background);
+    color: var(--text-color-dark);
+    border-radius: 15px;
+}
+
+.udalost-komentare-section li p {
+    flex: 1;
+    margin: 0;
+}
+/*Sekcia komentare-----------------------------------------------------*/
+
+
+/*Responsivity----------------------------------------------------------*/
+@media (max-width: 850px) {
+    .back-button {
+        font-size: 1.25rem;
+        margin: 0.5rem 0;
+    }
+
+    /*Logo a Info---------------*/
+    .udalost-main-section {
+        flex-direction: column;
+        gap: 1.5rem;
+        font-size: 1.25rem;
+        padding: 1rem;
+    }
+    .udalost-main-section img,
+    .udalost-main-section div {
+        width: 100%;
+    }
+    /*Popis---------------------*/
+    .udalost-popis-section h2 {
+        margin: 2rem 0 0 0.5rem;
+    }
+    .udalost-popis-section p {
+        font-size: 1.25rem;
+        margin: 1rem 0;
+    }
+    /*Tlacidla------------------*/
+    .udalost-prihlaseny-section button,
+    .udalost-komentare-section button,
+    .udalost-komentare-section input[type="submit"] {
+        font-size: 1.25rem;
+    }
+    /*Prihlaseny----------------*/
+    .udalost-prihlaseny-section div {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 2rem;
+    }
+    .udalost-prihlaseny-section h2 {
+        margin-left: 0.5rem;
+    }
+    .udalost-prihlaseny-section button {
+        margin: 0;
+        margin-left: auto;
+    }
+    /*Zoznamy-------------------*/
+    .udalost-prihlaseny-section ul,
+    .udalost-komentare-section ul {
+        font-size: 1.25rem;
+        padding: 0.25rem;
+    }
+    .udalost-prihlaseny-section li,
+    .udalost-komentare-section li {
+        padding: 0.5rem;
+        margin: 0.5rem;
+        gap: 0.5rem;
+    }
+    .udalost-prihlaseny-section li img,
+    .udalost-komentare-section li img {
+        width: 3rem;
+        height: 3rem;
+    }
+    /*Komentare-----------------*/
+    .udalost-komentare-section h2 {
+        margin: 2rem 0 1rem 0.5rem;
+    }
+    .udalost-komentare-section form {
+        margin: 0.5rem;
+        gap: 0.5rem;
+    }
+    .udalost-komentare-section input[type="text"] {
+        font-size: 1rem;
+    }
+    .udalost-komentare-section li {
+        flex-wrap: wrap;
+    }
+    .udalost-komentare-section li p {
+        flex: 1 1 100%;
+        order: 3;
+    }
+    .udalost-komentare-section li button {
+        margin-left: auto;
+        order: 4;
+    }
+}
+/*Responsivity----------------------------------------------------------*/

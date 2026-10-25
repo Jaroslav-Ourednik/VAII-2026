@@ -1,11 +1,13 @@
 :root {
 
     --light-background: #a4a4ba;
+    --mid-background: #babad0;
     --accent-background: #d4d4e7;
     --dark-background: #010128;
 
     --logo-color: #ff376cff ;
-    --text-color: #F8F4ED;
+    --text-color-light: #F8F4ED;
+    --text-color-dark: #010128;
 
     --light-purple: #A594F9;
 }
@@ -28,7 +30,7 @@ header {
     display: flex;
     align-items: center;
     background-color: var(--dark-background);
-    color: var(--text-color);
+    color: var(--text-color-light);
 }
 
 /*Logo and text----------------------------*/
@@ -39,8 +41,10 @@ header {
     margin-right: 1rem;
 }
 
-.logo-and-name h1 {
+.logo-and-name p {
     white-space: nowrap;
+    font-size:xx-large;
+    font-weight: bold;
 }
 
 .logo-and-name  > *{
@@ -73,11 +77,11 @@ header nav {
 nav a {
     display: inline-block;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--text-color-light);
     padding: 5px;
     margin: 1vw;
     font-size: 25px;
-    border-bottom: 2px solid var(--text-color);
+    border-bottom: 2px solid var(--text-color-light);
 }
 
 nav a:hover {
@@ -107,7 +111,7 @@ footer {
     display: flex;
     justify-content: space-between;
     background-color: var(--dark-background);
-    color: var(--text-color);
+    color: var(--text-color-light);
     padding: 10px;
     text-align: center;
 }
@@ -118,7 +122,7 @@ footer h3, footer p {
 
 footer a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--text-color-light);
 }
 
 .footer-left {

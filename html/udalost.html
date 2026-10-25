@@ -1,11 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="udalost.css">
+    <title>Názov udalosti – Nexus Rally</title>
 </head>
 <body>
+    <header>
+        <div class="logo-and-name">
+            <img src="img/Logo.svg" alt="Logo Nexus Rally">
+            <p>Nexus Rally</p>
+        </div>
+        <nav>
+            <div class="nav-left">
+                <a href="index.html">Domov</a>
+                <a href="#">Udalosti</a>
+                <a href="#">Skupiny</a>
+            </div>
+            <div class="nav-right">
+                <a href="#">Prihlásiť sa</a>
+                <a href="#">Registrovať sa</a>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+    <main>
+        <a href="#" class="back-button">&lt; Späť na udalosti</a>
+
+        <section class="udalost-main-section">
+            <img src="img/Placeholder.png" alt="Obrázok udalosti">
+            <div>
+                <h1>Názov udalosti</h1>
+                <dl>
+                    <dt>Typ:</dt>
+                    <dd>Typ udalosti</dd>
+                    <dt>Hra:</dt>
+                    <dd>Názov hry</dd>
+                    <dt>Dátum:</dt>
+                    <dd>Dátum udalosti</dd>
+                    <dt>Miesto:</dt>
+                    <dd>Adresa udalosti</dd>
+                    <dt>Organizátor:</dt>
+                    <dd>Prezívka</dd>
+                </dl>
+            </div>
+        </section>
+
+        <section class="udalost-popis-section">
+            <h2>Popis</h2>
+            <p>Krátky text o tom, čo sa bude diať, čo si treba doniesť...</p>
+        </section>
+
+        <section class="udalost-prihlaseny-section">
+            <div>
+                <h2>Prihlásení: 5 / 10</h2>
+                <button type="button">Zúčastniť sa</button>
+            </div>
+            <ul>
+                <li>
+                    <img src="img/Placeholder.png" alt="Avatar profilu">
+                    <span>Meno</span>
+                    <span class="role">Rola</span>
+                </li>
+                <li>
+                    <img src="img/Placeholder.png" alt="Avatar profilu">
+                    <span>Meno</span>
+                    <span class="role">Rola</span>
+                </li>
+                <li>
+                    <img src="img/Placeholder.png" alt="Avatar profilu">
+                    <span>Meno</span>
+                    <span class="role">Rola</span>
+                </li>
+                <li>
+                    <img src="img/Placeholder.png" alt="Avatar profilu">
+                    <span>Meno</span>
+                    <span class="role">Rola</span>
+                </li>
+                <li>
+                    <img src="img/Placeholder.png" alt="Avatar profilu">
+                    <span>Meno</span>
+                    <span class="role">Rola</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="udalost-komentare-section">
+            <h2>Komentáre</h2>
+            <form>
+                <input type="text" id="fkoment" name="fkoment" placeholder="Napíš komentár...">
+                <input type="submit" value="Odoslať">
+            </form>
+            <ul>
+                <li>
+                    <img src="img/Placeholder.png" alt="Avatar profilu">
+                    <span>Meno:</span>
+                    <p>Komentár</p>
+                    <button type="button">Vymazať</button>
+                </li>
+                <li>
+                    <img src="img/Placeholder.png" alt="Avatar profilu">
+                    <span>Meno:</span>
+                    <p>Komentár</p>
+                    <button type="button">Vymazať</button>
+                </li>
+                <li>
+                    <img src="img/Placeholder.png" alt="Avatar profilu">
+                    <span>Meno:</span>
+                    <p>Komentár</p>
+                    <button type="button">Vymazať</button>
+                </li>
+                <li>
+                    <img src="img/Placeholder.png" alt="Avatar profilu">
+                    <span>Meno:</span>
+                    <p>Komentár</p>
+                    <button type="button">Vymazať</button>
+                </li>
+            </ul>
+        </section>
+    </main>
+
     
+
+
+    <footer>
+        <div class="footer-left">
+            <h3>O projekte</h3>
+            <p>
+                Nexus Rally je miesto, kde nájdeš hráčov,
+                herné skupiny a udalosti. Organizuj LAN party,
+                večery so stolovými hrami alebo online hranie
+                s ľuďmi, ktorí majú rovnaké záujmy.
+            </p>
+        </div>
+
+        <div class="footer-right">
+            <h3>Kontakt</h3>
+            <a href="#">info@nexusrally.sk</a><br>
+            <p>Autor projektu: Jaroslav Ouředník</p>
+        </div>
+    </footer>
+
 </body>
 </html>
