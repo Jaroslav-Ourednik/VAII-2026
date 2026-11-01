@@ -1,39 +1,27 @@
-<?php
-
-/** @var \Framework\Support\LinkGenerator $link */
-?>
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col mt-5">
-            <div class="text-center">
-                <h2>Vaííčko MVC FW</h2>
-                <h3>Version <?= App\Configuration::FW_VERSION ?></h3>
-                <img src="<?= $link->asset('images/vaiicko_logo.png') ?>" alt="Framework Logo">
-                <p>
-                    Congratulations, you have successfully installed and run the framework
-                    <strong>Vaííčko</strong> <?= App\Configuration::FW_VERSION ?>!<br>
-                    We hope that you will create a great application using this framework.<br>
-                </p>
-                <p>
-                    This simple framework was created for teaching purposes and to better understand how the MVC
-                    architecture works.<br>
-                    It is intended for students of the subject <em>web application development</em>, but not only
-                    for them.
-                </p>
-            </div>
-        </div>
+<section class="hero">
+    <h1>Nájdi svoju partiu</h1>
+    <p>
+        Nexus Rally ti pomôže zorganizovať LAN party, večer so stolovými hrami
+        alebo online hranie. Prihlás sa na udalosť alebo sa pridaj do skupiny
+        s ľuďmi, ktorí hrajú to isté čo ty.
+    </p>
+    <div class="hero-buttons">
+        <a class="hero-button" href="<?= $link->url('event.index') ?>">Nájsť udalosť</a>
+        <a class="hero-button" href="<?= $link->url('group.index') ?>">Nájsť skupinu</a>
     </div>
-    <div class="row mt-3">
-        <div class="col text-center">
-            <h4>Authors</h4>
-            <div>
-                <a href="mailto:Patrik.Hrkut@fri.uniza.sk">doc. Ing. Patrik Hrkút, PhD.</a><br>
-                <a href="mailto:Michal.Duracik@fri.uniza.sk">Ing. Michal Ďuračík, PhD.</a><br>
-                <a href="mailto:Matej.Mesko@fri.uniza.sk">Ing. Matej Meško, PhD.</a><br><br>
-                &copy; 2020-<?= date('Y') ?> University of Žilina, Faculty of Management Science and Informatics,
-                Department of Software Technologies
-            </div>
-        </div>
-    </div>
-</div>
+</section>
+
+<section class="features">
+    <article>
+        <h2>LAN party</h2>
+        <p>Zorganizuj LAN party alebo sa prihlás na niektorú z nich. Termín, miesto aj zoznam účastníkov nájdeš na jednom mieste.</p>
+    </article>
+    <article>
+        <h2>Stolové hry</h2>
+        <p>Stolovky, D&amp;D alebo kartové hry? Nájdi partiu na večer plný hrania a zisti, kto sa pridá.</p>
+    </article>
+    <article>
+        <h2>Online skupiny</h2>
+        <p>Pridaj sa do skupiny hráčov, ktorí hrajú rovnakú hru ako ty, alebo si založ vlastnú.</p>
+    </article>
+</section>
