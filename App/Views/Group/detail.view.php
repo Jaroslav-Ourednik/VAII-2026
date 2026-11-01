@@ -1,1 +1,1 @@
-   <h1>Zoznam skupín</h1>
+   <h1>Detail skupiny</h1>

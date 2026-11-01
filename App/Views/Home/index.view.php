@@ -2,8 +2,8 @@
     <h1>Nájdi svoju partiu</h1>
     <p>
         Nexus Rally ti pomôže zorganizovať LAN party, večer so stolovými hrami
-        alebo online hranie. Prihlás sa na udalosť alebo sa pridaj do skupiny
-        s ľuďmi, ktorí hrajú to isté čo ty.
+        alebo online hranie. Prihlás sa na udalosť, alebo sa pridaj do skupiny
+        a pokecaj s ľuďmi, ktorí hrajú to isté čo ty.
     </p>
     <div class="hero-buttons">
         <a class="hero-button" href="<?= $link->url('event.index') ?>">Nájsť udalosť</a>
@@ -21,7 +21,7 @@
         <p>Stolovky, D&amp;D alebo kartové hry? Nájdi partiu na večer plný hrania a zisti, kto sa pridá.</p>
     </article>
     <article>
-        <h2>Online skupiny</h2>
-        <p>Pridaj sa do skupiny hráčov, ktorí hrajú rovnakú hru ako ty, alebo si založ vlastnú.</p>
+        <h2>Online hranie</h2>
+        <p>Dohodni online session alebo turnaj v obľúbenej hre. Dátum, odkaz na Discord a zoznam hráčov nájdeš v udalosti.</p>
     </article>
 </section>
