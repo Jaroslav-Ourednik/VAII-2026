@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="<?= $link->asset('css/style.css') ?>">
     <link rel="stylesheet" href="<?= $link->asset('css/udalost.css') ?>">
+    <link rel="stylesheet" href="<?= $link->asset('css/skupina.css') ?>">
     <script src="<?= $link->asset('js/script.js') ?>"></script>
 </head>
 <body>

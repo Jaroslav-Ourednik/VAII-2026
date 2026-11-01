@@ -1,4 +1,4 @@
-<a href="#" class="back-button">&lt; Späť na udalosti</a>
+<a href="<?= $link->url('event.index') ?>" class="back-button">&lt; Späť na udalosti</a>
 
 <section class="udalost-main-section">
     <img src="<?= $link->asset('images/Placeholder.png') ?>" alt="Obrázok udalosti">

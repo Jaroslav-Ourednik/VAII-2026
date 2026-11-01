@@ -1,0 +1,205 @@
+/*Hlavicka skupiny-----------------------------------------------------*/
+.skupina-hlavicka {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: var(--mid-background);
+    color: var(--text-color-dark);
+    border-radius: 30px;
+}
+
+.skupina-hlavicka img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.skupina-hlavicka > div {
+    flex: 1;
+}
+
+.skupina-hlavicka h1 {
+    margin-top: 0;
+}
+
+.skupina-hlavicka p {
+    margin: 0.25rem 0;
+}
+/*Hlavicka skupiny-----------------------------------------------------*/
+
+
+/*Tlacidla-------------------------------------------------------------*/
+.skupina-hlavicka button,
+.skupina-formular input[type="submit"] {
+    color: var(--text-color-light);
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    border: 3px solid var(--dark-background);
+    background-color: var(--dark-background);
+    border-radius: 15px;
+}
+
+.skupina-hlavicka button:hover,
+.skupina-formular input[type="submit"]:hover {
+    color: var(--light-purple);
+    border-color: var(--light-purple);
+    cursor: pointer;
+}
+/*Tlacidla-------------------------------------------------------------*/
+
+
+/*Obsah: chat + clenovia-----------------------------------------------*/
+.skupina-obsah {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 20rem;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skupina-chat,
+.skupina-clenovia {
+    background-color: var(--mid-background);
+    color: var(--text-color-dark);
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+.skupina-chat h2,
+.skupina-clenovia h2 {
+    margin-top: 0;
+}
+
+.skupina-spravy img,
+.skupina-clenovia img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+/*Obsah: chat + clenovia-----------------------------------------------*/
+
+
+/*Chat-----------------------------------------------------------------*/
+.skupina-spravy {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-height: 28rem;
+    overflow-y: auto;
+}
+
+.skupina-spravy li {
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background-color: var(--accent-background);
+    border-radius: 15px;
+}
+
+.skupina-spravy li > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.skupina-spravy p {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.sprava-hlavicka {
+    font-size: 0.9rem;
+}
+
+.sprava-meno {
+    font-weight: bold;
+}
+
+.sprava-hlavicka time {
+    margin-left: 0.5rem;
+    opacity: 0.7;
+}
+
+.skupina-formular {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.skupina-formular input[type="text"] {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+    font-size: 1rem;
+    border: 3px solid var(--accent-background);
+    background-color: var(--accent-background);
+    color: var(--text-color-dark);
+    border-radius: 15px;
+}
+/*Chat-----------------------------------------------------------------*/
+
+
+/*Clenovia-------------------------------------------------------------*/
+.skupina-clenovia ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.skupina-clenovia li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    background-color: var(--accent-background);
+    border-radius: 15px;
+}
+
+.skupina-clenovia li span:first-of-type {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.clen-rola {
+    margin-left: auto;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+/*Clenovia-------------------------------------------------------------*/
+
+
+/*Responsivity---------------------------------------------------------*/
+@media (max-width: 850px) {
+    .skupina-hlavicka {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .skupina-hlavicka img {
+        width: 100%;
+        height: auto;
+        max-height: 14rem;
+    }
+
+    .skupina-obsah {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .skupina-spravy {
+        max-height: 24rem;
+    }
+}
+/*Responsivity---------------------------------------------------------*/
