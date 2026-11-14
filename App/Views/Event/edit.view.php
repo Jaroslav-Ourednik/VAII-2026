@@ -16,15 +16,28 @@
     </p>
     <p>
         <label for="event_date">Dátum a čas</label><br>
-        <input type="datetime-local" id="event_date" name="event_date" required value="<?= str_replace(' ', 'T', $event->getEventDate()) ?>">
+        <input type="datetime-local" id="event_date" name="event_date" required
+            value="<?= str_replace(' ', 'T', $event->getEventDate()) ?>">
     </p>
     <p>
         <label for="location">Miesto</label><br>
-        <input type="text" id="location" name="location" required value="<?= htmlspecialchars($event->getLocation()) ?>">
+        <input type="text" id="location" name="location" required
+            value="<?= htmlspecialchars($event->getLocation()) ?>">
     </p>
     <p>
         <label for="description">Popis</label><br>
         <textarea id="description" name="description"><?= htmlspecialchars($event->getDescription() ?? '') ?></textarea>
+    </p>
+    <p>
+        <label for="game_id">Hra</label><br>
+        <select id="game_id" name="game_id">
+            <option value="">Bez hry</option>
+            <?php foreach ($games as $game) { ?>
+                <option value="<?= $game->getId() ?>" <?= $event->getGameId() === $game->getId() ? 'selected' : '' ?>>
+                    <?= htmlspecialchars($game->getName()) ?>
+                </option>
+            <?php } ?>
+        </select>
     </p>
     <input type="submit" value="Uložiť">
 </form>

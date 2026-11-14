@@ -12,6 +12,7 @@ class Event extends Model
     protected ?string $event_date = null;
     protected ?string $location = null;
     protected ?string $description = null;
+    protected ?int $game_id = null;
 
     public function getId(): ?int
     {
@@ -66,5 +67,15 @@ class Event extends Model
     public function setDescription(?string $description): void
     {
         $this->description = $description;
+    }
+
+    public function getGameId(): ?int
+    {
+        return $this->game_id;
+    }
+
+    public function setGameId(?int $game_id): void
+    {
+        $this->game_id = $game_id;
     }
 }

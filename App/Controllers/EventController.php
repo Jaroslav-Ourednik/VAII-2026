@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use Framework\Http\HttpException;
 use App\Models\Event;
+use App\Models\Game;
 use Framework\Core\BaseController;
 use Framework\Http\Request;
 use Framework\Http\Responses\Response;
@@ -33,7 +34,7 @@ class EventController extends BaseController
 
     public function create(Request $request): Response
     {
-        return $this->html();
+        return $this->html(['games' => Game::getAll()]);
     }
 
     public function store(Request $request): Response
@@ -44,6 +45,8 @@ class EventController extends BaseController
         $event->setEventDate($request->value('event_date'));
         $event->setLocation($request->value('location'));
         $event->setDescription($request->value('description'));
+        $gameId = $request->value('game_id');
+        $event->setGameId($gameId === null || $gameId === '' ? null : (int)$gameId);
         $event->save();
         return $this->redirect($this->url('event.index'));
     }
@@ -54,7 +57,7 @@ class EventController extends BaseController
         if ($event === null) {
             throw new HttpException(404);
         }
-        return $this->html(['event' => $event]);
+        return $this->html(['event' => $event, 'games' => Game::getAll()]);
     }
 
     public function update(Request $request): Response
@@ -68,6 +71,8 @@ class EventController extends BaseController
         $event->setEventDate($request->value('event_date'));
         $event->setLocation($request->value('location'));
         $event->setDescription($request->value('description'));
+        $gameId = $request->value('game_id');
+        $event->setGameId($gameId === null || $gameId === '' ? null : (int)$gameId);
         $event->save();
         return $this->redirect($this->url('event.index'));
     }
