@@ -40,7 +40,7 @@ class Game extends Model
     {
         return $this->max_players;
     }
-    
+
     public function setMaxPlayers(?int $max_players): void
     {
         $this->max_players = $max_players;
