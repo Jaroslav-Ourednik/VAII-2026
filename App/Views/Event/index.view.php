@@ -3,14 +3,15 @@
 <a href="<?= $link->url('game.index') ?>">Hry</a>
 
 <?php foreach ($events as $event) { ?>
-
     <?php
-        $game = $event->getGameId() !== null
-        ? \App\Models\Game::getOne($event->getGameId()): null;
+    $game = null;
+    if ($event->getGameId() !== null) {
+        $game = \App\Models\Game::getOne($event->getGameId());
+    }
     ?>
     <p>
-        <?= $event->getTitle() ?> (<?= $event->getType() ?>),
-        <?= $event->getEventDate() ?>, <?= $event->getLocation() ?>
+        <?= htmlspecialchars($event->getTitle()) ?> (<?= htmlspecialchars($event->getType()) ?>),
+        <?= $event->getEventDate() ?>, <?= htmlspecialchars($event->getLocation()) ?>,
         <?= $game !== null ? htmlspecialchars($game->getName()) : 'bez hry' ?>
         <a href="<?= $link->url('event.delete', ['id' => $event->getId()]) ?>">Zmazať</a>
         <a href="<?= $link->url('event.edit', ['id' => $event->getId()]) ?>">Upraviť</a>

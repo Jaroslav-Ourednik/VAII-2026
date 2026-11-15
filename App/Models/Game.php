@@ -6,7 +6,6 @@ use Framework\Core\Model;
 
 class Game extends Model
 {
-
     protected ?int $id = null;
     protected ?string $name = null;
     protected ?string $platform = null;

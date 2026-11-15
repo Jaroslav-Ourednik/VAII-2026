@@ -27,7 +27,7 @@ class EventController extends BaseController
         $id = (int)$request->value('id');
         $event = Event::getOne($id);
         if ($event !== null) {
-           $event->delete();
+            $event->delete();
         }
         return $this->redirect($this->url('event.index'));
     }
